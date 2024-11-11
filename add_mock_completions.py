@@ -47,6 +47,7 @@ def add_mock_completions():
     for habit_name in daily_habits + weekly_habits:
         habit = Habit(habit_name, "daily" if habit_name in daily_habits else "weekly")
         habit.update_streak()  # Calculate and save the streak for each habit
+    print("Mock completion data has been successfully added to the database.")
 
 # Run the function to add mock completions and update streaks for all habits
 add_mock_completions()
