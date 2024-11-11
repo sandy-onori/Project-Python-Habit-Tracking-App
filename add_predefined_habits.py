@@ -62,6 +62,7 @@ def add_predefined_habits():
                 cursor.execute("INSERT INTO habits (name, periodicity, created_at, streak) VALUES (?, ?, ?, ?)",
                                (name, periodicity, created_at, 0))
         conn.commit()
+    print("Predefined habits have been successfully added to the database.")
 
 # Ensure tables are set up, then add predefined habits for testing purposes
 setup_database()
